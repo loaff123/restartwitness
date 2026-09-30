@@ -1,0 +1,3589 @@
+{
+  "boundaries": [
+    8,
+    32
+  ],
+  "claims": "Controlled original fixtures only; no upstream defect or novelty claim.",
+  "clean": [
+    {
+      "id": "integrator",
+      "study": {
+        "config": {
+          "fault": "clean",
+          "model": "integrator",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "id": "stochastic",
+      "study": {
+        "config": {
+          "fault": "clean",
+          "model": "stochastic",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "id": "events",
+      "study": {
+        "config": {
+          "fault": "clean",
+          "model": "events",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {
+            "events": {
+              "expected_keys": [
+                "average:0@8",
+                "average:1@32",
+                "average:2@64"
+              ],
+              "fields": [
+                {
+                  "atol": 0.0,
+                  "dtype": "<i8",
+                  "mode": "exact",
+                  "name": "step",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "step"
+                },
+                {
+                  "atol": 0.0,
+                  "dtype": "<f8",
+                  "mode": "exact",
+                  "name": "mean",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "m"
+                }
+              ],
+              "name": "events"
+            }
+          },
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    }
+  ],
+  "controls": [
+    {
+      "expected_finding": "save_path_difference",
+      "id": "save_side_effect",
+      "schedule": [
+        64
+      ],
+      "study": {
+        "config": {
+          "fault": "save_side_effect",
+          "model": "integrator",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "expected_finding": "baseline_inconclusive",
+      "id": "nondeterministic",
+      "schedule": [
+        8
+      ],
+      "study": {
+        "config": {
+          "fault": "nondeterministic",
+          "model": "integrator",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "expected_finding": "observation_inconclusive",
+      "id": "mutating_observer",
+      "schedule": [
+        8
+      ],
+      "study": {
+        "config": {
+          "fault": "mutating_observer",
+          "model": "integrator",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "expected_finding": "unsupported",
+      "id": "unsupported",
+      "schedule": [
+        8
+      ],
+      "study": {
+        "config": {
+          "fault": "unsupported",
+          "model": "integrator",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "expected_finding": "timeout",
+      "id": "timeout",
+      "schedule": [
+        8
+      ],
+      "study": {
+        "config": {
+          "fault": "timeout",
+          "model": "integrator",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 0.4
+      }
+    },
+    {
+      "expected_finding": "output_contract_violation",
+      "id": "malformed_outputs",
+      "schedule": [
+        8
+      ],
+      "study": {
+        "config": {
+          "fault": "malformed_outputs",
+          "model": "events",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {
+            "events": {
+              "expected_keys": [
+                "average:0@8",
+                "average:1@32",
+                "average:2@64"
+              ],
+              "fields": [
+                {
+                  "atol": 0.0,
+                  "dtype": "<i8",
+                  "mode": "exact",
+                  "name": "step",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "step"
+                },
+                {
+                  "atol": 0.0,
+                  "dtype": "<f8",
+                  "mode": "exact",
+                  "name": "mean",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "m"
+                }
+              ],
+              "name": "events"
+            }
+          },
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "expected_finding": "equivalent_under_contract",
+      "id": "harmless_hidden",
+      "schedule": [
+        8
+      ],
+      "study": {
+        "config": {
+          "fault": "harmless_hidden",
+          "model": "integrator",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    }
+  ],
+  "date": "2026-09-30",
+  "evaluation": {
+    "conventional": {
+      "schedule": [
+        32
+      ],
+      "scoring": "U-R final ordinary state only; no output history; actual 320 steps; excluded from equal-budget comparison"
+    },
+    "equal_budget_methods": {
+      "boundary": [
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          32
+        ]
+      ],
+      "fixed": [
+        [
+          0
+        ],
+        [
+          21
+        ],
+        [
+          42
+        ],
+        [
+          64
+        ]
+      ],
+      "random": [
+        [
+          19
+        ],
+        [
+          12
+        ],
+        [
+          49
+        ],
+        [
+          5
+        ]
+      ]
+    },
+    "max_reduction_trials": 64,
+    "per_case_simulated_steps": 320,
+    "per_method_per_fixture_steps": 1280,
+    "study_budget_seconds": 600,
+    "worker_timeout_seconds": 60
+  },
+  "faults": [
+    {
+      "applicability": [
+        [
+          7
+        ]
+      ],
+      "expected_finding": "restore_path_difference",
+      "id": "missing_rng",
+      "study": {
+        "config": {
+          "fault": "missing_rng",
+          "model": "stochastic",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "applicability": [
+        [
+          7
+        ]
+      ],
+      "expected_finding": "restore_path_difference",
+      "id": "seed_reset",
+      "study": {
+        "config": {
+          "fault": "seed_reset",
+          "model": "stochastic",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "applicability": [
+        [
+          7
+        ]
+      ],
+      "expected_finding": "restore_path_difference",
+      "id": "missing_cached_stochastic",
+      "study": {
+        "config": {
+          "fault": "missing_cached_stochastic",
+          "model": "stochastic",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "applicability": [
+        [
+          7
+        ]
+      ],
+      "expected_finding": "restore_path_difference",
+      "id": "integrator_cache",
+      "study": {
+        "config": {
+          "fault": "integrator_cache",
+          "model": "integrator",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "applicability": [
+        [
+          9
+        ]
+      ],
+      "expected_finding": "restore_path_difference",
+      "id": "evolving_timestep",
+      "study": {
+        "config": {
+          "fault": "evolving_timestep",
+          "model": "integrator",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "applicability": [
+        [
+          9
+        ]
+      ],
+      "expected_finding": "restore_path_difference",
+      "id": "forcing_phase",
+      "study": {
+        "config": {
+          "fault": "forcing_phase",
+          "model": "integrator",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "applicability": [
+        [
+          7
+        ]
+      ],
+      "expected_finding": "restore_path_difference",
+      "id": "average_sum",
+      "study": {
+        "config": {
+          "fault": "average_sum",
+          "model": "events",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {
+            "events": {
+              "expected_keys": [
+                "average:0@8",
+                "average:1@32",
+                "average:2@64"
+              ],
+              "fields": [
+                {
+                  "atol": 0.0,
+                  "dtype": "<i8",
+                  "mode": "exact",
+                  "name": "step",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "step"
+                },
+                {
+                  "atol": 0.0,
+                  "dtype": "<f8",
+                  "mode": "exact",
+                  "name": "mean",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "m"
+                }
+              ],
+              "name": "events"
+            }
+          },
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "applicability": [
+        [
+          7
+        ]
+      ],
+      "expected_finding": "restore_path_difference",
+      "id": "average_count",
+      "study": {
+        "config": {
+          "fault": "average_count",
+          "model": "events",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {
+            "events": {
+              "expected_keys": [
+                "average:0@8",
+                "average:1@32",
+                "average:2@64"
+              ],
+              "fields": [
+                {
+                  "atol": 0.0,
+                  "dtype": "<i8",
+                  "mode": "exact",
+                  "name": "step",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "step"
+                },
+                {
+                  "atol": 0.0,
+                  "dtype": "<f8",
+                  "mode": "exact",
+                  "name": "mean",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "m"
+                }
+              ],
+              "name": "events"
+            }
+          },
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "applicability": [
+        [
+          9
+        ]
+      ],
+      "expected_finding": "output_contract_violation",
+      "id": "output_id",
+      "study": {
+        "config": {
+          "fault": "output_id",
+          "model": "events",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {
+            "events": {
+              "expected_keys": [
+                "average:0@8",
+                "average:1@32",
+                "average:2@64"
+              ],
+              "fields": [
+                {
+                  "atol": 0.0,
+                  "dtype": "<i8",
+                  "mode": "exact",
+                  "name": "step",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "step"
+                },
+                {
+                  "atol": 0.0,
+                  "dtype": "<f8",
+                  "mode": "exact",
+                  "name": "mean",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "m"
+                }
+              ],
+              "name": "events"
+            }
+          },
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "applicability": [
+        [
+          8
+        ]
+      ],
+      "expected_finding": "output_contract_violation",
+      "id": "duplicate_record",
+      "study": {
+        "config": {
+          "fault": "duplicate_record",
+          "model": "events",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {
+            "events": {
+              "expected_keys": [
+                "average:0@8",
+                "average:1@32",
+                "average:2@64"
+              ],
+              "fields": [
+                {
+                  "atol": 0.0,
+                  "dtype": "<i8",
+                  "mode": "exact",
+                  "name": "step",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "step"
+                },
+                {
+                  "atol": 0.0,
+                  "dtype": "<f8",
+                  "mode": "exact",
+                  "name": "mean",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "m"
+                }
+              ],
+              "name": "events"
+            }
+          },
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "applicability": [
+        [
+          7
+        ]
+      ],
+      "expected_finding": "output_contract_violation",
+      "id": "skipped_record",
+      "study": {
+        "config": {
+          "fault": "skipped_record",
+          "model": "events",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {
+            "events": {
+              "expected_keys": [
+                "average:0@8",
+                "average:1@32",
+                "average:2@64"
+              ],
+              "fields": [
+                {
+                  "atol": 0.0,
+                  "dtype": "<i8",
+                  "mode": "exact",
+                  "name": "step",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "step"
+                },
+                {
+                  "atol": 0.0,
+                  "dtype": "<f8",
+                  "mode": "exact",
+                  "name": "mean",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "m"
+                }
+              ],
+              "name": "events"
+            }
+          },
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "applicability": [
+        [
+          7
+        ]
+      ],
+      "expected_finding": "restore_path_difference",
+      "id": "restored_callback",
+      "study": {
+        "config": {
+          "fault": "restored_callback",
+          "model": "events",
+          "seed": 271828
+        },
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "s"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "x",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "v",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "m/s"
+            }
+          ],
+          "outputs": {
+            "events": {
+              "expected_keys": [
+                "average:0@8",
+                "average:1@32",
+                "average:2@64"
+              ],
+              "fields": [
+                {
+                  "atol": 0.0,
+                  "dtype": "<i8",
+                  "mode": "exact",
+                  "name": "step",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "step"
+                },
+                {
+                  "atol": 0.0,
+                  "dtype": "<f8",
+                  "mode": "exact",
+                  "name": "mean",
+                  "rtol": 0.0,
+                  "shape": [],
+                  "unit": "m"
+                }
+              ],
+              "name": "events"
+            }
+          },
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.synthetic",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    }
+  ],
+  "formulas": {
+    "events": "v=0.05*sin(pre-step*0.2);x+=0.01*v; callback adds0.2 atstep8; prescribed reset x=1 atstep32; means emit and reset accumulator at8,32,64; semantic keys average:output_id@step",
+    "integrator": "velocity Verlet with acceleration cache a=-x+0.1*sin(phase*0.2), phase increments each step; dt starts0.01 and scales0.8 after steps8,32",
+    "stochastic": "v=0.8*v+0.05*z; x+=0.01*v; Box-Muller Gaussian pairs with saved cache and Python Random(271828)"
+  },
+  "limits": [
+    "Hand-selected deterministic corpus, no confidence intervals",
+    "No historical affected/fixed reproduction",
+    "No domain review",
+    "No prevalence or impact inference",
+    "Equal simulated work does not equal process starts or wall time"
+  ],
+  "native": [
+    {
+      "expected_finding": "equivalent_under_contract",
+      "id": "rebound",
+      "schedule": [
+        8,
+        32
+      ],
+      "study": {
+        "config": {},
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "rebound time"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "position",
+              "rtol": 0.0,
+              "shape": [
+                2,
+                3
+              ],
+              "unit": "rebound length"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "velocity",
+              "rtol": 0.0,
+              "shape": [
+                2,
+                3
+              ],
+              "unit": "rebound velocity"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.rebound_native",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "expected_finding": "equivalent_under_contract",
+      "id": "openmm",
+      "schedule": [
+        8,
+        32
+      ],
+      "study": {
+        "config": {},
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "ps"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "position",
+              "rtol": 0.0,
+              "shape": [
+                1,
+                3
+              ],
+              "unit": "nm"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "velocity",
+              "rtol": 0.0,
+              "shape": [
+                1,
+                3
+              ],
+              "unit": "nm/ps"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.openmm_native",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    },
+    {
+      "expected_finding": "restore_path_difference",
+      "id": "openmm-state-misuse",
+      "schedule": [
+        8,
+        32
+      ],
+      "study": {
+        "config": {},
+        "contract": {
+          "fields": [
+            {
+              "atol": 0.0,
+              "dtype": "<i8",
+              "mode": "exact",
+              "name": "step",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "step"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "time",
+              "rtol": 0.0,
+              "shape": [],
+              "unit": "ps"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "position",
+              "rtol": 0.0,
+              "shape": [
+                1,
+                3
+              ],
+              "unit": "nm"
+            },
+            {
+              "atol": 0.0,
+              "dtype": "<f8",
+              "mode": "exact",
+              "name": "velocity",
+              "rtol": 0.0,
+              "shape": [
+                1,
+                3
+              ],
+              "unit": "nm/ps"
+            }
+          ],
+          "outputs": {},
+          "schema_version": 1
+        },
+        "driver": "restartwitness.adapters.openmm_state_misuse",
+        "observations": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "study_budget": 600.0,
+        "termination": "normal",
+        "total_steps": 64,
+        "worker_timeout": 60.0
+      }
+    }
+  ],
+  "protocol": "restartwitness-controlled-v1",
+  "schedule_recipe": [
+    [
+      0
+    ],
+    [
+      1
+    ],
+    [
+      7
+    ],
+    [
+      8
+    ],
+    [
+      9
+    ],
+    [
+      31
+    ],
+    [
+      32
+    ],
+    [
+      33
+    ],
+    [
+      63
+    ],
+    [
+      64
+    ],
+    [
+      1,
+      32,
+      63
+    ],
+    [
+      7,
+      8,
+      9
+    ],
+    [
+      8,
+      8
+    ]
+  ],
+  "schema_version": 1,
+  "seed": 271828,
+  "status": "frozen-before-confirmatory-evaluation",
+  "steps": 64
+}

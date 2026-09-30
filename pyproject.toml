@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "restartwitness"
+version = "0.1.0a1"
+description = "Auditable three-arm restart-contract experiments for scientific Python"
+requires-python = ">=3.11"
+license = "BSD-3-Clause"
+readme = "README.md"
+classifiers = ["Development Status :: 3 - Alpha", "Intended Audience :: Science/Research", "Programming Language :: Python :: 3", "Topic :: Scientific/Engineering"]
+dependencies = ["numpy>=2.0,<3"]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.2", "hypothesis==6.151.9", "build==1.4.0", "ruff==0.14.0"]
+native = ["rebound==4.4.11", "openmm==8.4.0.post2"]
+
+[project.scripts]
+restartwitness = "restartwitness.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = ["native: optional real scientific-library integrations"]

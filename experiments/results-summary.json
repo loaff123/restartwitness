@@ -1,0 +1,143 @@
+{
+  "protocol_sha256": "ca53adf18c73b01ceb7c445df3f87d5f68351c9a1e538faf0d8fb0e88356e539",
+  "source_commits": [
+    "71ca6c071e14fd2309270752544a8fb6e0d0b071"
+  ],
+  "groups": {
+    "acceptance": {
+      "planned": 61,
+      "verified": 61,
+      "expected_met": 61,
+      "wall_seconds": 254.68287918200076,
+      "simulated_steps": 18880,
+      "process_starts": 382,
+      "unknown_work_segments": 5,
+      "exceptions": []
+    },
+    "fixed": {
+      "planned": 60,
+      "verified": 60,
+      "expected_met": 0,
+      "wall_seconds": 247.70175778400153,
+      "simulated_steps": 19200,
+      "process_starts": 360,
+      "unknown_work_segments": 0,
+      "exceptions": [],
+      "detected_faults": 11
+    },
+    "random": {
+      "planned": 60,
+      "verified": 60,
+      "expected_met": 0,
+      "wall_seconds": 265.78397555799893,
+      "simulated_steps": 19200,
+      "process_starts": 360,
+      "unknown_work_segments": 0,
+      "exceptions": [],
+      "detected_faults": 10
+    },
+    "boundary": {
+      "planned": 60,
+      "verified": 60,
+      "expected_met": 0,
+      "wall_seconds": 269.976608262994,
+      "simulated_steps": 19200,
+      "process_starts": 360,
+      "unknown_work_segments": 0,
+      "exceptions": [],
+      "detected_faults": 12
+    },
+    "conventional": {
+      "planned": 15,
+      "verified": 15,
+      "expected_met": 0,
+      "wall_seconds": 17.85081850700226,
+      "simulated_steps": 4800,
+      "process_starts": 90,
+      "unknown_work_segments": 0,
+      "exceptions": [],
+      "detected_faults": 5
+    }
+  },
+  "faults": {
+    "missing_rng": {
+      "fixed": true,
+      "random": true,
+      "boundary": true,
+      "conventional": true
+    },
+    "seed_reset": {
+      "fixed": true,
+      "random": true,
+      "boundary": true,
+      "conventional": true
+    },
+    "missing_cached_stochastic": {
+      "fixed": true,
+      "random": true,
+      "boundary": true,
+      "conventional": false
+    },
+    "integrator_cache": {
+      "fixed": true,
+      "random": true,
+      "boundary": true,
+      "conventional": true
+    },
+    "evolving_timestep": {
+      "fixed": true,
+      "random": true,
+      "boundary": true,
+      "conventional": true
+    },
+    "forcing_phase": {
+      "fixed": true,
+      "random": true,
+      "boundary": true,
+      "conventional": true
+    },
+    "average_sum": {
+      "fixed": true,
+      "random": true,
+      "boundary": true,
+      "conventional": false
+    },
+    "average_count": {
+      "fixed": true,
+      "random": true,
+      "boundary": true,
+      "conventional": false
+    },
+    "output_id": {
+      "fixed": true,
+      "random": true,
+      "boundary": true,
+      "conventional": false
+    },
+    "duplicate_record": {
+      "fixed": true,
+      "random": false,
+      "boundary": true,
+      "conventional": false
+    },
+    "skipped_record": {
+      "fixed": false,
+      "random": false,
+      "boundary": true,
+      "conventional": false
+    },
+    "restored_callback": {
+      "fixed": true,
+      "random": true,
+      "boundary": true,
+      "conventional": false
+    }
+  },
+  "limitations": [
+    "Hand-selected deterministic corpus, no confidence intervals",
+    "No historical affected/fixed reproduction",
+    "No domain review",
+    "No prevalence or impact inference",
+    "Equal simulated work does not equal process starts or wall time"
+  ]
+}
