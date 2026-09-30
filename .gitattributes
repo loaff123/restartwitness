@@ -1,0 +1,2 @@
+# Preserve frozen protocol and source-identity bytes on every checkout.
+* text=auto eol=lf

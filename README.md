@@ -106,7 +106,7 @@ python experiments/evaluate.py --group conventional --out results/conventional
 
 Each group has an explicit 600-second budget and reports every planned case, including unrun ones. Fixed/random/boundary each allocate 1,280 simulated steps per fixture including all controls. Process starts and wall time are recorded separately. The conventional midpoint/final-only row has a smaller workload and is excluded from equal-budget claims. No confidence intervals or population defect-rate estimates are attached to this hand-selected deterministic corpus. See [fixtures](docs/fixtures.md), [measured results](docs/experiment-results.md), and [reproduction](docs/reproduction.md).
 
-The [interactive preview](https://restartwitness.lyczz.chatgpt.site) includes verified reports and a complete source/evidence download. The [public GitHub repository](https://github.com/loaff123/restartwitness) contains the source. Remote CI verification is in progress; no remote pass is claimed yet.
+The [interactive preview](https://restartwitness.lyczz.chatgpt.site) includes verified reports and a complete source/evidence download. The [public GitHub repository](https://github.com/loaff123/restartwitness) contains the source. See the [exact-commit CI results](https://github.com/loaff123/restartwitness/actions) for platform verification. The complete download records its verified commit and CI run in release-manifest.json.
 
 ## Scope and related work
 

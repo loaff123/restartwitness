@@ -444,6 +444,29 @@ def test_unsupported_extended_precision_nonfinite_diagnostic_stays_json_safe():
     json.dumps(result, allow_nan=False)
 
 
+@pytest.mark.parametrize(
+    ("value", "expected"),
+    [
+        (1.25, 1.25),
+        (float("inf"), "Infinity"),
+        (-float("inf"), "-Infinity"),
+        (float("nan"), "NaN"),
+    ],
+)
+def test_longdouble_diagnostics_when_storage_is_eight_bytes(value, expected):
+    # ARM macOS/Windows longdouble has 8-byte storage, yet item() still
+    # returns np.longdouble. Emulate only that dtype width on other platforms.
+    class EightByteLongdouble(np.longdouble):
+        @property
+        def dtype(self):
+            return np.dtype("float64")
+
+    scalar = EightByteLongdouble(value)
+    assert isinstance(scalar.item(), np.longdouble)
+    result = api()._value(scalar)
+    assert json.loads(json.dumps(result, allow_nan=False)) == expected
+
+
 def test_records_report_all_identity_problems_in_one_pass():
     result = api().compare_records(
         records(keys=("step:0", "step:0", "wrong"), values=(1, 2, 3)),

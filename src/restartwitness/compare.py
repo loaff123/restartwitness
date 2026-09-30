@@ -48,7 +48,9 @@ def _value(value: Any) -> Any:
                     else ("Infinity" if value > 0 else "-Infinity")
                 )
             return str(value)
-        value = value.item()
+        # longdouble.item() can remain a NumPy scalar even when its storage
+        # is eight bytes (for example ARM macOS and Windows).
+        value = float(value) if isinstance(value, np.floating) else value.item()
     if isinstance(value, float) and not math.isfinite(value):
         return (
             "NaN" if math.isnan(value) else ("Infinity" if value > 0 else "-Infinity")
