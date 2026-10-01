@@ -4,7 +4,7 @@
 
 Run the same local experiment without saving, saving and continuing, and saving then restoring in a fresh Python interpreter. Inspect all three direct comparisons, distinguish inconclusive controls from attributable differences, and reduce a failing checkpoint schedule without shortening the experiment.
 
-**Developer preview.** Controlled synthetic faults and two native checkpoint integrations are engineering evidence. They are not new scientific defects, proof of novelty, or academic impact. Historical affected/fixed reproduction and independent scientific-domain review remain open gates.
+**Developer preview.** Controlled synthetic faults and two native checkpoint integrations are engineering evidence. They are not new scientific defects, proof of novelty, or academic impact. An [opt-in historical OpenMM case](experiments/historical/openmm_cpu_rng/README.md) now reproduces a resolved native-checkpoint defect under a disclosed tolerance contract, retaining exact-comparison negatives. Independent scientific-domain review and broader research/impact gates remain open.
 
 ## Quick start
 

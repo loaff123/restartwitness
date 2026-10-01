@@ -19,7 +19,7 @@ A separate, deliberately weaker OpenMM State-only workflow keeps the save/contin
 
 The tiny native tests alone do not justify another framework. The conditional build proceeds to test whether strict three-arm adjudication, event-directed schedules, reproducible reduction, and independently rechecked offline evidence provide a reusable tool beyond them. Failure to deliver those features means retaining the examples rather than claiming a substantial separate project.
 
-Historical affected/fixed reproduction and independent scientific-domain review have NOT been completed. Research-positioned release Gate B is closed. Impact Gate C is closed. Only Linux has actually been run at this stage.
+A bounded [historical OpenMM release comparison](../experiments/historical/openmm_cpu_rng/README.md) is available, with the failed exact/strict profiles and separate source-informed tolerance profile disclosed. It is not adjacent fix/parent causal isolation. Independent scientific-domain review has NOT been completed. Research-positioned release Gate B is closed. Impact Gate C is closed. Only Linux has actually been run at this stage.
 
 ## Primary sources and licensing
 

@@ -37,4 +37,4 @@ The numerical evaluation used local commit `71ca6c071e14fd2309270752544a8fb6e0d0
 
 Exact replay deliberately requires matching recorded source/environment identities. Offline verification does not require the original environment. In a different environment, run the extracted study as a new experiment instead of calling it an exact replay. See `reproduction.md`.
 
-Historical affected/fixed reproduction, scientific-domain review and independent adoption remain absent. Research and impact gates remain closed.
+A later, separately scoped [historical OpenMM case](../experiments/historical/openmm_cpu_rng/README.md) adds a release-version comparison with explicit tolerance amendments and negatives. Scientific-domain review and independent adoption remain absent; this frozen synthetic experiment is unchanged. Research and impact gates remain closed.

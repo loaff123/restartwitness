@@ -1,0 +1,90 @@
+{
+  "format": "restartwitness-historical-protocol-v1",
+  "purpose": "Resolved native OpenMM CPU checkpoint defect validation; no new defect or novelty claim",
+  "initial_engine_commit": "7ba891733412dd6ad03010c0bde5c9122f9c032b",
+  "issue": "https://github.com/openmm/openmm/issues/4716",
+  "fix_pr": "https://github.com/openmm/openmm/pull/4740",
+  "fix_commit": "f67ae730a13197bda8a75b9a99556f354bff5e1f",
+  "fix_parent": "9fe1bae6efa18a55994522a8aac4f24338a2894e",
+  "runtime_commits": {
+    "8.2.0": "53770948682c40bd460b39830d4e0f0fd3a4b868",
+    "8.3.0": "1ce5d91d9dedfdc273066fafa1a618bf05c25b85"
+  },
+  "runtime_scope": "Official release wheels, not adjacent fix/parent builds; other changes separate versions",
+  "python": "3.12.14",
+  "numpy": "2.4.3",
+  "platforms": [
+    "CPU",
+    "Reference"
+  ],
+  "cpu_threads": 1,
+  "deterministic_forces": true,
+  "total_steps": 110,
+  "dt_ps": 0.001,
+  "primary_seed": 42,
+  "primary_schedules": [
+    [],
+    [
+      99
+    ],
+    [
+      100
+    ],
+    [
+      101
+    ],
+    [
+      99,
+      100,
+      101
+    ],
+    [
+      100,
+      100
+    ],
+    [
+      110
+    ]
+  ],
+  "primary_contract": "Exact fields; additional 1e-12+1e-12*max(abs(a),abs(b)) audit",
+  "fields": {
+    "step": "integer step",
+    "time": "ps",
+    "position": "10x3 nm",
+    "velocity": "10x3 nm/ps",
+    "box": "3x3 nm"
+  },
+  "arms": [
+    "U1",
+    "U2",
+    "O",
+    "P",
+    "R"
+  ],
+  "observation_cadence": "all 0..110 plus aligned save phases; O final only",
+  "fixture_lineage": "Original Python fixture using upstream testLangevin ten-particle force parameters. Explicit Middle integrator, fixed lattice, fixed seed, zero velocities and process-isolated restoration differ from upstream test.",
+  "fixture": {
+    "particle_mass_Da": 1,
+    "charges_e": [
+      0.1,
+      -0.1
+    ],
+    "sigma_nm": 0.2,
+    "epsilon_kJ_mol": 0.1,
+    "periodic_cutoff_nm": 1,
+    "box_nm": 3,
+    "lattice_origin_nm": 0.3,
+    "lattice_spacing_nm": 0.8,
+    "temperature_K": 300,
+    "friction_per_ps": 1
+  },
+  "controls": "Compare U1-U2, U1-O, U-P, P-R, U-R directly; no State-based restore",
+  "bounds": {
+    "worker_seconds": 30,
+    "case_seconds": 120,
+    "suite_seconds": 600,
+    "total_primary_cases": 28,
+    "primary_steps": 15400
+  },
+  "chronology": "These parameters were locally recorded before formal execution. This is not an external preregistration or an independent timestamp attestation."
+}

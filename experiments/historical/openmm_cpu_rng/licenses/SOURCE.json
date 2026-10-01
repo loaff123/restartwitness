@@ -1,0 +1,7 @@
+{
+  "license_url": "https://raw.githubusercontent.com/openmm/openmm/5ee2cba0ccbfe5e11cd9f814470aa2b454180927/docs-source/licenses/Licenses.txt",
+  "sha256": "437b7168cc997abea3b5f2a9e0fb6894f96de77b9c69be428ccfcfe9bed58293",
+  "copied_test_revision": "f67ae730a13197bda8a75b9a99556f354bff5e1f",
+  "copied_test_git_blob": "cc5d493d43c9105cb184d5aebb323fb10ea6d577",
+  "note": "Current upstream license overview retained with clean UTF-8; the historical test retains its own exact MIT copyright header. The historical overview itself contained a replacement character and was not manually repaired."
+}

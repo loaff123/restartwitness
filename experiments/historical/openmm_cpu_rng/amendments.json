@@ -1,0 +1,33 @@
+[
+  {
+    "number": 1,
+    "stage": "before formal U/P/R cases",
+    "change": "Replaced initially proposed 8.1.1 with 8.2.0",
+    "reason": "8.1.1 wheel could not set positions with NumPy 2.4.3; no affected numerical step completed in that attempt. Embedded8.1.1 revision also differed from the tag. An early launch before installation completion failed the version guard, with no case executed."
+  },
+  {
+    "number": 2,
+    "stage": "after primary seed 42 analysis, before subsequently tested seeds 43/44",
+    "change": "Separate source-informed absolute 1e-5 profile, integer steps exact",
+    "reason": "Exact and 1e-12 profiles also rejected fixed CPU. Upstream testLangevin uses TOL1e-5 with max(1,expected norm/value) scaling. Absolute componentwise 1e-5 is distinct and no looser than those assertions, not a scientific error budget.",
+    "new_seeds": [
+      43,
+      44
+    ],
+    "schedule": [
+      100
+    ],
+    "platforms": [
+      "CPU",
+      "Reference"
+    ],
+    "versions": [
+      "8.2.0",
+      "8.3.0"
+    ],
+    "additional_cases": 8,
+    "additional_steps": 4400,
+    "original_negative_results_retained": true,
+    "external_preregistration": false
+  }
+]

@@ -1,0 +1,386 @@
+{
+  "format": "restartwitness-historical-summary-v1",
+  "scope": "Summary of the original 36-case evaluation, not a full raw evidence bundle. Public excerpts project four cases; their separate checker establishes only included observations.",
+  "counts": {
+    "cases": 36,
+    "simulated_steps": 19800,
+    "process_starts": 224,
+    "case_wall_seconds_sum": 97.32022369399874
+  },
+  "cases": [
+    {
+      "case": "affected-cpu-100",
+      "formal_status": "restore_path_difference",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.004915942389489614,
+      "max_abs_velocity_nm_ps": 0.6971207078643545,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": true
+    },
+    {
+      "case": "affected-cpu-100-100",
+      "formal_status": "restore_path_difference",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.004915942389489614,
+      "max_abs_velocity_nm_ps": 0.6971207078643545,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": true
+    },
+    {
+      "case": "affected-cpu-101",
+      "formal_status": "restore_path_difference",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0039581485299030605,
+      "max_abs_velocity_nm_ps": 0.7178619390244487,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": true
+    },
+    {
+      "case": "affected-cpu-110",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "affected-cpu-99",
+      "formal_status": "restore_path_difference",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.005515584265822937,
+      "max_abs_velocity_nm_ps": 0.7824479351789224,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": true
+    },
+    {
+      "case": "affected-cpu-99-100-101",
+      "formal_status": "restore_path_difference",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.007313870131172184,
+      "max_abs_velocity_nm_ps": 0.9853391540425915,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": true
+    },
+    {
+      "case": "affected-cpu-none",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "affected-reference-100",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "affected-reference-100-100",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "affected-reference-101",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "affected-reference-110",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "affected-reference-99",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "affected-reference-99-100-101",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "affected-reference-none",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-cpu-100",
+      "formal_status": "restore_path_difference",
+      "controls_exact": true,
+      "max_abs_position_nm": 1.5361045768713666e-12,
+      "max_abs_velocity_nm_ps": 2.3752655398112665e-10,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-cpu-100-100",
+      "formal_status": "restore_path_difference",
+      "controls_exact": true,
+      "max_abs_position_nm": 1.5361045768713666e-12,
+      "max_abs_velocity_nm_ps": 2.3752655398112665e-10,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-cpu-101",
+      "formal_status": "restore_path_difference",
+      "controls_exact": true,
+      "max_abs_position_nm": 1.0700329511337259e-12,
+      "max_abs_velocity_nm_ps": 2.3752655398112665e-10,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-cpu-110",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-cpu-99",
+      "formal_status": "restore_path_difference",
+      "controls_exact": true,
+      "max_abs_position_nm": 1.5361045768713666e-12,
+      "max_abs_velocity_nm_ps": 2.3752655398112665e-10,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-cpu-99-100-101",
+      "formal_status": "restore_path_difference",
+      "controls_exact": true,
+      "max_abs_position_nm": 1.5361045768713666e-12,
+      "max_abs_velocity_nm_ps": 2.3752655398112665e-10,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-cpu-none",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-reference-100",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-reference-100-100",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-reference-101",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-reference-110",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-reference-99",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-reference-99-100-101",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "fixed-reference-none",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "heldout-affected-cpu-43",
+      "formal_status": "restore_path_difference",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0025513476123999457,
+      "max_abs_velocity_nm_ps": 0.5697340730056158,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": true
+    },
+    {
+      "case": "heldout-affected-cpu-44",
+      "formal_status": "restore_path_difference",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.005405645121610847,
+      "max_abs_velocity_nm_ps": 0.9851439608107142,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": true
+    },
+    {
+      "case": "heldout-affected-reference-43",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "heldout-affected-reference-44",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "heldout-fixed-cpu-43",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 2.1378454562182014e-12,
+      "max_abs_velocity_nm_ps": 3.5620101312971997e-10,
+      "exact_difference": true,
+      "strict_1e-12_difference": true,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "heldout-fixed-cpu-44",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "heldout-fixed-reference-43",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    },
+    {
+      "case": "heldout-fixed-reference-44",
+      "formal_status": "equivalent_under_contract",
+      "controls_exact": true,
+      "max_abs_position_nm": 0.0,
+      "max_abs_velocity_nm_ps": 0.0,
+      "exact_difference": false,
+      "strict_1e-12_difference": false,
+      "source_informed_absolute_1e-5_difference": false
+    }
+  ],
+  "upstream_oracle": {
+    "affected_CPU": "fail",
+    "fixed_CPU": "pass",
+    "affected_Reference": "pass",
+    "fixed_Reference": "pass",
+    "source_file_git_blob": "cc5d493d43c9105cb184d5aebb323fb10ea6d577",
+    "assertion_semantics": "upstream scaled 1e-5 tolerance; copied test unchanged, platform selection wrapper separate"
+  },
+  "limitations": [
+    "Initial exact and 1e-12 contracts do not separate affected/fixed CPU",
+    "Second-stage tolerance was chosen after primary results and before subsequently tested seeds, not externally preregistered",
+    "Version contrast does not isolate one patch",
+    "No independent scientific-domain review or academic-impact claim"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "format": "restartwitness-excerpt-manifest-v1",
+  "files": {
+    "affected-cpu-100.json": "babe292bb19ac394f3246a5027265d521d90c49e12fff0ed501bd7c75d12484d",
+    "fixed-cpu-100.json": "125b3b90025561762e21e0876b89e12d56e9ebc6b0d45fbd079555e15a9a27f7",
+    "heldout-affected-cpu-43.json": "3188b6871f356175eb09c3c08a7600299b856b960acdf3101614e72e53fa2f13",
+    "heldout-fixed-cpu-43.json": "7c7dec8a8517e214d59324395d65cd727e2975d7c5c7fb44c988f1ecc61943e2"
+  }
+}

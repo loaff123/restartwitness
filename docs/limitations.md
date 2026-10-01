@@ -1,6 +1,6 @@
 # Limits and honest interpretation
 
-This is a developer preview. No historical affected-versus-fixed scientific defect has been reproduced and no independent scientific-domain review or adoption has been established. Engineering review is not domain endorsement.
+This is a developer preview. One [historical OpenMM release comparison](../experiments/historical/openmm_cpu_rng/README.md) now distinguishes a resolved native-checkpoint defect under an explicitly amended tolerance contract; exact and strict-tolerance negatives remain. No independent scientific-domain review or adoption has been established. Engineering review is not domain endorsement.
 
 - A pass is observational equivalence under selected fields/cadence/units/tolerances, not certification of hidden state, scientific validity, reproducibility across hardware, or checkpoint durability
 - Two baselines and one sparse observation control are smoke controls, not statistical proofs of determinism or observer noninterference
