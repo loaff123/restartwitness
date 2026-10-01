@@ -669,12 +669,43 @@ def adjudicate(arms, contract):
             findings.append("restart_difference")
     if any(p["outputs"]["status"] != "equivalent" for p in comparisons.values()):
         findings.append("output_contract_violation")
+    evidence_issues = []
+    for label, pair in comparisons.items():
+        for issue in pair["diagnostics"]:
+            kind = issue["kind"]
+            if issue["severity"] != "invalid" or kind in (
+                "missing_arm",
+                "arm_not_complete",
+            ):
+                continue
+            side = 0 if issue.get("side") == "left" else 1
+            arm = arms.get(PAIRS[label][side])
+            if isinstance(arm, dict) and arm.get("status") != "complete":
+                if kind == "missing_observation":
+                    continue
+                if (
+                    kind == "empty_trajectory"
+                    and isinstance(arm.get("observations"), list)
+                    and len(arm["observations"]) == 0
+                ):
+                    continue
+                outputs = arm.get("outputs")
+                if isinstance(outputs, dict):
+                    if kind == "output_table_names_mismatch" and set(outputs).issubset(
+                        issue["expected"]
+                    ):
+                        continue
+                    if (
+                        kind in ("invalid_record_batch", "invalid_observation")
+                        and "table" in issue
+                        and issue["table"] not in outputs
+                    ):
+                        continue
+            evidence_issues.append(issue)
+    if evidence_issues:
+        findings.append("invalid")
     if not findings:
-        findings.append(
-            "invalid"
-            if any(p["status"] == "invalid" for p in comparisons.values())
-            else "equivalent_under_contract"
-        )
+        findings.append("equivalent_under_contract")
     all_issues = [
         dict(d, comparison=name)
         for name, p in comparisons.items()
@@ -887,10 +918,16 @@ def _provenance(root, manifest, study, cuts, arms):
                 request.get("arm") == name and request.get("cuts") == cuts,
                 "worker request arm/schedule mismatch",
             )
+            require(
+                i <= (len(cuts) if name == "R" else 0),
+                "worker request segment boundary mismatch",
+            )
             expected_start = cuts[i - 1] if name == "R" and i else 0
             require(
-                request.get("start_step") == expected_start
-                and request.get("next_cut") == (i if name == "R" else 0),
+                type(request.get("start_step")) is int
+                and request["start_step"] == expected_start
+                and type(request.get("next_cut")) is int
+                and request["next_cut"] == (i if name == "R" else 0),
                 "worker request segment boundary mismatch",
             )
 

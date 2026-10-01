@@ -177,7 +177,11 @@ attribution. Only fully valid agreeing evidence yields
 `equivalent_under_contract`.
 
 Missing arms yield `incomplete`; malformed direct-path observations yield
-`invalid`. Worker `driver_error`, `checkpoint_error`, `timeout`, `unsupported`,
+`invalid`, even when another valid contrast yields a difference or the controls
+are inconclusive. Worker availability alone does not add `invalid`: missing arms
+and non-complete workers retain their own findings. A non-complete worker's
+absent observations or output tables are unavailable work, not malformed data;
+present malformed values remain invalid. Worker `driver_error`, `checkpoint_error`, `timeout`, `unsupported`,
 and `evidence_integrity_error` statuses remain failures. No missing, empty,
 skipped, unrun, or failed arm is equivalent. The first finding is the primary
 `status`; inspect the complete `findings`, `comparisons`, and `diagnostics` for

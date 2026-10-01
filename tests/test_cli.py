@@ -68,3 +68,13 @@ def test_default_cut_is_midpoint_of_requested_horizon(tmp_path):
     result = cli("run", config, "--out", tmp_path / "case")
     assert result.returncode == 0, result.stderr
     assert json.loads(result.stdout)["schedule"] == [2]
+
+
+def test_mixed_valid_difference_and_invalid_evidence_exit_is_error():
+    from restartwitness.cli import _exit
+    from restartwitness.compare import adjudicate_arms
+    from tests.test_compare import arms, contract
+
+    result = adjudicate_arms(arms({"P": 1.0, "R": float("nan")}), contract())
+    assert result["findings"] == ["save_path_difference", "invalid"]
+    assert _exit({"adjudication": result}) == 2

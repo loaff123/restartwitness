@@ -576,3 +576,68 @@ def test_generated_tolerance_cases_match_exact_rational_oracle():
         assert (got["status"] == "equivalent") == expected
 
     check()
+
+
+@pytest.mark.parametrize("invalid_evidence", ["nonfinite", "unit"])
+def test_valid_save_difference_cannot_hide_invalid_restore_evidence(invalid_evidence):
+    case = arms({"P": 1.0})
+    if invalid_evidence == "nonfinite":
+        case["R"]["observations"][0]["fields"]["x"][...] = np.nan
+    else:
+        case["R"]["observations"][0]["units"]["x"] = "cm"
+    result = api().adjudicate_arms(case, contract())
+    assert result["findings"] == ["save_path_difference", "invalid"]
+    assert result["comparisons"]["U-P"]["status"] == "difference"
+    assert result["comparisons"]["P-R"]["status"] == "invalid"
+    assert result["comparisons"]["U-R"]["status"] == "invalid"
+    assert result["first_witness"]["comparison"] == "U-P"
+
+
+def test_unsupported_worker_with_valid_difference_is_not_invalid_evidence():
+    case = arms({"P": 1.0})
+    case["R"]["status"] = "unsupported"
+    result = api().adjudicate_arms(case, contract())
+    assert result["findings"] == ["unsupported"]
+    assert result["comparisons"]["U-P"]["status"] == "difference"
+    assert any(d["kind"] == "arm_not_complete" for d in result["diagnostics"])
+
+
+def test_unsupported_does_not_hide_malformed_partial_observations():
+    case = arms({"P": 1.0, "R": np.nan})
+    case["R"]["status"] = "unsupported"
+    result = api().adjudicate_arms(case, contract())
+    assert result["findings"] == ["unsupported", "invalid"]
+
+
+def test_complete_empty_evidence_is_invalid_despite_an_unsupported_peer():
+    case = arms()
+    case["U1"]["status"] = "unsupported"
+    case["O"]["observations"] = []
+    result = api().adjudicate_arms(case, contract())
+    assert "invalid" in result["findings"]
+
+
+def test_unsupported_observer_with_present_malformed_key_remains_invalid():
+    from tests.independent_check import adjudicate
+
+    case = arms()
+    case["O"]["status"] = "unsupported"
+    case["O"]["observations"][0]["key"] = [4, "unknown_phase", 0]
+    for result in (
+        api().adjudicate_arms(case, contract()),
+        adjudicate(case, contract().to_dict()),
+    ):
+        assert "invalid" in result["findings"]
+
+
+def test_unsupported_observer_with_nonlist_evidence_fails_closed():
+    from tests.independent_check import adjudicate
+
+    case = arms()
+    case["O"]["status"] = "unsupported"
+    case["O"]["observations"] = np.array([1.0, 2.0])
+    for result in (
+        api().adjudicate_arms(case, contract()),
+        adjudicate(case, contract().to_dict()),
+    ):
+        assert "invalid" in result["findings"]

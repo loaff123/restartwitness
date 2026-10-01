@@ -55,6 +55,8 @@ def _summary(result):
 
 
 def _exit(result):
+    if "invalid" in result["adjudication"]["findings"]:
+        return 2
     s = result["adjudication"]["status"]
     return 0 if s == "equivalent_under_contract" else (1 if s in DIFFERENCES else 2)
 

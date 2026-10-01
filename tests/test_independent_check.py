@@ -585,3 +585,37 @@ def test_root_raw_and_labels_cannot_contradict_retained_worker_raw_arrays(tmp_pa
     reseal(root)
     with pytest.raises(api().CheckError, match="segment|aggregate|worker raw"):
         api().check_case(root)
+
+
+@pytest.mark.parametrize("invalid_evidence", ["nonfinite", "unit"])
+def test_independent_findings_retain_invalidity_with_valid_save_difference(
+    tmp_path, invalid_evidence
+):
+    root = fixture(tmp_path / "case", {"P": 1.0})
+    if invalid_evidence == "nonfinite":
+        np.save(root / "R-0.npy", np.array(np.nan), allow_pickle=False)
+    else:
+        arm = json.loads((root / "R.json").read_text())
+        arm["observations"][0]["units"]["x"] = "cm"
+        dump(root / "R.json", arm)
+    reseal(root)
+    result = api().check_case(root, check_cached=False)
+    # Expected findings come from the declared contract, not production output.
+    assert result["findings"] == ["save_path_difference", "invalid"]
+    assert result["comparisons"]["U-P"]["status"] == "difference"
+    assert result["comparisons"]["P-R"]["status"] == "invalid"
+    assert result["comparisons"]["U-R"]["status"] == "invalid"
+    assert result["first_witness"]["comparison"] == "U-P"
+
+
+def test_independent_unsupported_with_valid_difference_is_not_invalid_evidence(
+    tmp_path,
+):
+    root = fixture(tmp_path / "case", {"P": 1.0})
+    arm = json.loads((root / "R.json").read_text())
+    arm["status"] = "unsupported"
+    dump(root / "R.json", arm)
+    reseal(root)
+    result = api().check_case(root, check_cached=False)
+    assert result["findings"] == ["unsupported"]
+    assert result["comparisons"]["U-P"]["status"] == "difference"

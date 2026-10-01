@@ -286,12 +286,15 @@ def test_record_identities_units_and_tolerances_are_visible(cases, tmp_path):
         "sample:1",
         "duplicate_record_keys",
         "output_contract_violation",
+        "invalid",
         "J",
         "0.01",
         "0.001",
     ]:
         assert item in content
-    assert ET.fromstring(junit(root)).find("testcase/failure") is not None
+    suite = ET.fromstring(junit(root))
+    assert suite.find("testcase/error") is not None
+    assert suite.find("testcase/failure") is None
 
 
 @pytest.mark.parametrize("renderer_index", [0, 1])
@@ -378,3 +381,58 @@ def test_nondeterministic_baseline_is_skipped_even_with_restart_differences(
     assert suite.find("testcase/skipped") is not None
     assert "baseline_inconclusive" in suite.findtext("testcase/skipped")
     assert suite.attrib["failures"] == "0"
+
+
+@pytest.mark.parametrize("invalid_evidence", ["nonfinite", "unit", "unsupported"])
+def test_mixed_difference_report_respects_invalid_evidence_precedence(
+    cases, tmp_path, invalid_evidence
+):
+    from tests.independent_check import check_case
+
+    render, junit = report_api()
+    case = copy.deepcopy(read_verified_case(cases["clean"]))
+    case["arms"]["P"]["observations"][0]["fields"]["x"][...] += 1.0
+    if invalid_evidence == "nonfinite":
+        case["arms"]["R"]["observations"][0]["fields"]["x"][...] = np.nan
+    elif invalid_evidence == "unit":
+        case["arms"]["R"]["observations"][0]["units"]["x"] = "cm"
+    else:
+        case["arms"]["R"]["status"] = "unsupported"
+    root = write_case(tmp_path / invalid_evidence, case, cases["clean"])
+    expected = (
+        ["unsupported"]
+        if invalid_evidence == "unsupported"
+        else ["save_path_difference", "invalid"]
+    )
+    assert read_verified_case(root)["adjudication"]["findings"] == expected
+    assert check_case(root)["findings"] == expected
+    outcome = "skipped" if invalid_evidence == "unsupported" else "error"
+    page = render(root)
+    assert f'class="verdict {outcome}"' in page
+    assert all(finding in page for finding in expected)
+    suite = ET.fromstring(junit(root))
+    assert suite.attrib["failures"] == "0"
+    assert suite.attrib["errors"] == str(int(outcome == "error"))
+    assert suite.attrib["skipped"] == str(int(outcome == "skipped"))
+    assert suite.find(f"testcase/{outcome}") is not None
+    assert suite.find("testcase/failure") is None
+    assert "U-P" in suite.findtext("testcase/system-out")
+
+
+@pytest.mark.parametrize("model", ["integrator", "events"])
+def test_real_unsupported_workers_with_no_evidence_remain_skipped(tmp_path, model):
+    from restartwitness.examples import example_study
+    from tests.independent_check import check_case
+
+    root = tmp_path / model
+    result = run_case(example_study(model, "unsupported", 4), [2], root)
+    assert all(arm["status"] == "unsupported" for arm in result["arms"].values())
+    assert all(arm["observations"] == [] for arm in result["arms"].values())
+    assert "invalid" not in result["adjudication"]["findings"]
+    assert "invalid" not in check_case(root)["findings"]
+    render, junit = report_api()
+    assert 'class="verdict skipped"' in render(root)
+    suite = ET.fromstring(junit(root))
+    assert suite.attrib["errors"] == "0"
+    assert suite.attrib["skipped"] == "1"
+    assert suite.find("testcase/skipped") is not None

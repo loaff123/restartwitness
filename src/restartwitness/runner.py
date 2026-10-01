@@ -475,6 +475,19 @@ def _read_verified_case(path, check_cached=True):
                 raise IntegrityError("worker request differs from frozen study")
             if request.get("arm") != name or request.get("cuts") != schedule:
                 raise IntegrityError("worker arm/schedule request mismatch")
+            if segment_index > (len(schedule) if name == "R" else 0):
+                raise IntegrityError("worker request segment boundary mismatch")
+            expected_start = (
+                schedule[segment_index - 1] if name == "R" and segment_index else 0
+            )
+            expected_cut = segment_index if name == "R" else 0
+            if (
+                type(request.get("start_step")) is not int
+                or request["start_step"] != expected_start
+                or type(request.get("next_cut")) is not int
+                or request["next_cut"] != expected_cut
+            ):
+                raise IntegrityError("worker request segment boundary mismatch")
             for checkpoint in segment.get("checkpoints", []):
                 base = (
                     root

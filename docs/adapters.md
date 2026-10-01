@@ -17,4 +17,4 @@ The runner's observation key `[logical_step, phase, occurrence]` is separate fro
 
 Your study specifies an exact schema for every numeric field and each expected table/key sequence. Arrays may be bool, integer or real floats up to64bits. Nonfinite values are invalid by default. Trust and provenance limitations are in limitations.md.
 
-Exit codes: CLI0 = equivalent;1 = an attributed/detected difference;2 = invalid, unsupported, incomplete or error. Report generation returns0 for any valid rendered evidence, including a failure report; never infer scientific success from report generation alone.
+Exit codes: CLI0 = equivalent;1 = an attributed/detected difference;2 = invalid, unsupported, incomplete or error. Invalid findings take precedence over a coexisting difference for the CLI exit code. Report generation returns0 for any valid rendered evidence, including a failure report; never infer scientific success from report generation alone.

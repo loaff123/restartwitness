@@ -467,6 +467,35 @@ def _compare_arms(
     return {**_result(diagnostics), "trajectory": trajectory, "outputs": outputs}
 
 
+def _invalid_evidence(diagnostic: dict, arm: Any) -> bool:
+    """Separate malformed data from evidence a non-complete worker never produced."""
+    kind = diagnostic["kind"]
+    if diagnostic["severity"] != "invalid" or kind in (
+        "missing_arm",
+        "arm_not_complete",
+    ):
+        return False
+    if isinstance(arm, Mapping) and arm.get("status") != "complete":
+        if kind == "missing_observation":
+            return False
+        observations = arm.get("observations")
+        if (
+            kind == "empty_trajectory"
+            and isinstance(observations, (list, tuple))
+            and not observations
+        ):
+            return False
+        outputs = arm.get("outputs")
+        if isinstance(outputs, Mapping):
+            if kind == "output_table_names_mismatch":
+                return bool(set(outputs) - set(diagnostic["expected"]))
+            if kind in ("invalid_record_batch", "invalid_observation") and (
+                "table" in diagnostic and diagnostic["table"] not in outputs
+            ):
+                return False
+    return True
+
+
 def adjudicate_arms(arms: Any, contract: Contract) -> dict:
     """Retain all direct contrasts, gating intervention attribution on controls.
 
@@ -541,7 +570,15 @@ def adjudicate_arms(arms: Any, contract: Contract) -> dict:
     )
     if output_bad:
         findings.append("output_contract_violation")
-    if not findings and any(c["status"] == "invalid" for c in comparisons.values()):
+    # Evidence invalidity is independent of valid differences or control findings.
+    # Worker availability already has its own finding (including unsupported).
+    if any(
+        _invalid_evidence(
+            d, arms.get(pairs[label][0 if d.get("side") == "left" else 1])
+        )
+        for label, comparison in comparisons.items()
+        for d in comparison["diagnostics"]
+    ):
         findings.append("invalid")
     if not findings:
         findings.append("equivalent_under_contract")

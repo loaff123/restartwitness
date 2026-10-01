@@ -48,7 +48,7 @@ One testcase represents the whole experiment. This prevents several successful-l
 | Unrecognized future classification | `error` |
 | Bundle integrity verification fails | Raise an exception; no XML result |
 
-Execution/invalidity findings take priority over skipped findings; skipped findings take priority over intervention differences. All findings and all five contrasts remain in `system-out`, including each available witness and recorded error. Properties include the manifest digest, driver, schedule and primary status. XML preserves a distinction between “not established” and “different.”
+Execution/invalidity findings take priority over skipped findings; skipped findings take priority over intervention differences. A valid save-path difference alongside malformed or nonfinite restore evidence is an `error`, with both findings retained. A worker marked `unsupported` alone remains `skipped`, including when other raw contrasts differ. All findings and all five contrasts remain in `system-out`, including each available witness and recorded error. Properties include the manifest digest, driver, schedule and primary status. XML preserves a distinction between “not established” and “different.”
 
 ## Replaying
 
