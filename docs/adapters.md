@@ -17,4 +17,12 @@ The runner's observation key `[logical_step, phase, occurrence]` is separate fro
 
 Your study specifies an exact schema for every numeric field and each expected table/key sequence. Arrays may be bool, integer or real floats up to64bits. Nonfinite values are invalid by default. Trust and provenance limitations are in limitations.md.
 
+Observation fields and output-table columns must be plain `numpy.ndarray` values.
+Masked arrays (including arrays with no masked elements), other ndarray subclasses,
+lists, and Python or NumPy scalars are rejected at ingestion with a recorded worker
+error. Return a zero-dimensional plain ndarray for a scalar field. Accepted
+observations are defensively copied without changing shape, dtype, or values;
+noncontiguous and read-only arrays are supported. Rejection does not establish
+equivalence under the contract.
+
 Exit codes: CLI0 = equivalent;1 = an attributed/detected difference;2 = invalid, unsupported, incomplete or error. Invalid findings take precedence over a coexisting difference for the CLI exit code. Report generation returns0 for any valid rendered evidence, including a failure report; never infer scientific success from report generation alone.

@@ -81,6 +81,8 @@ def safe_path(root, relative):
 
 
 def _numeric(a):
+    if type(a) is not np.ndarray:
+        raise IntegrityError("only plain numpy.ndarray values allowed")
     if a.dtype.kind not in "biuf" or a.dtype.hasobject:
         raise IntegrityError("only bool/integer/real numeric arrays allowed")
     if a.nbytes > MAX_ARRAY or a.ndim > 8:

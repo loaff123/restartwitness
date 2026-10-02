@@ -11,6 +11,15 @@ from .driver import load_driver, UnsupportedProfile
 from .evidence import read_json, write_data, write_json, digest, IntegrityError
 
 
+def _require_array_fields(fields, location):
+    for name, value in fields.items():
+        if type(value) is not np.ndarray:
+            raise TypeError(
+                f"{location} field {name!r} must be a plain numpy.ndarray; "
+                f"got {type(value).__name__}"
+            )
+
+
 def run_segment(request):
     root = Path(request["segment_dir"])
     root.mkdir(parents=True, exist_ok=False)
@@ -47,6 +56,8 @@ def run_segment(request):
             fields = d.observe(s)
             if not isinstance(fields, dict) or not fields:
                 raise ValueError("empty observation")
+            # Copy only supported arrays: coercion would discard masks/subclass semantics.
+            _require_array_fields(fields, "observation")
             fields = {
                 name: np.array(value, copy=True) for name, value in fields.items()
             }
@@ -124,7 +135,12 @@ def run_segment(request):
             ):
                 observe("ordinary")
         phase = "outputs"
-        result["outputs"] = d.collect_outputs(output)
+        outputs = d.collect_outputs(output)
+        if isinstance(outputs, dict):
+            for name, table in outputs.items():
+                if isinstance(table, dict) and isinstance(table.get("fields"), dict):
+                    _require_array_fields(table["fields"], f"output table {name!r}")
+        result["outputs"] = outputs
         result.update(end_step=k, next_cut=cut_index)
     except Exception as exc:
         result.update(
