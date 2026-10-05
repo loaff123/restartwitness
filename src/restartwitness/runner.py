@@ -566,6 +566,17 @@ def read_verified_case(path, check_cached=True):
         raise IntegrityError(f"malformed case evidence: {exc}") from exc
 
 
+def _require_external_output(bundle, output):
+    """Derived output must not change the sealed input's file inventory."""
+    try:
+        source = Path(bundle).resolve()
+        destination = Path(output).resolve()
+    except (OSError, RuntimeError) as exc:
+        raise ValueError("input or output path could not be resolved") from exc
+    if destination.is_relative_to(source):
+        raise ValueError("output must be outside the input evidence bundle")
+
+
 def replay(path, output_dir, trust_driver=False):
     if not trust_driver:
         raise ValueError(
@@ -574,4 +585,5 @@ def replay(path, output_dir, trust_driver=False):
     old = read_verified_case(path)
     if _identity(old["study"]["driver"]) != old["identity"]:
         raise IntegrityError("source/environment identity changed; replay refused")
+    _require_external_output(path, output_dir)
     return run_case(old["study"], old["schedule"], output_dir)

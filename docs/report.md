@@ -11,7 +11,7 @@ Path('report.html').write_text(render_report(bundle), encoding='utf-8')
 Path('junit.xml').write_text(render_junit(bundle), encoding='utf-8')
 ```
 
-Store generated reports **outside** the sealed bundle. Adding files inside it changes its verified file set. Open `report.html` directly in a browser; no server, account or connection is needed.
+Store generated reports **outside** the sealed bundle. The CLI rejects output paths inside the input bundle before writing, because added files would change its verified file set. The same rule applies to replay and reduction destinations. Open `report.html` directly in a browser; no server, account or connection is needed.
 
 ## Verification before presentation
 

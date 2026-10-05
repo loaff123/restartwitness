@@ -23,6 +23,8 @@ restartwitness reduce evidence --out reduced --trust-driver --trials 32
 
 Open `report.html` locally. It needs no server, network, account, or telemetry. The report exposes the contract, first observed witness in each contrast, checkpoint markers, controls, records, and work counts.
 
+Report, replay and reduction destinations must be new paths outside the input evidence bundle. Nested outputs are refused before writing so the original sealed file set remains verifiable; sibling paths such as `report.html`, `replayed` and `reduced` above are allowed.
+
 Only run drivers you trust. Importing a driver executes arbitrary local Python. Fresh processes are an experimental control, **not a security sandbox**. `verify` and `report` do not import drivers or restore native checkpoint files. Replay requires explicit trust and matching recorded source/environment identities.
 
 ## What the experiment means

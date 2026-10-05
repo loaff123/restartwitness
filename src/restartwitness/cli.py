@@ -8,7 +8,14 @@ import sys
 import time
 from .evidence import read_json, write_json, IntegrityError
 from .examples import example_study
-from .runner import run_case, read_verified_case, replay, _identity, validate_study
+from .runner import (
+    run_case,
+    read_verified_case,
+    replay,
+    _identity,
+    _require_external_output,
+    validate_study,
+)
 from .reduce import reduce_schedule
 
 DIFFERENCES = {
@@ -147,6 +154,7 @@ def main(argv=None):
         elif args.command == "report":
             from .report import render_report, render_junit
 
+            _require_external_output(args.bundle, args.out)
             content = (
                 render_report(args.bundle)
                 if args.format == "html"
@@ -170,6 +178,7 @@ def main(argv=None):
                 )
             if not 0 <= args.trials <= 64 or not 0 < args.seconds <= 600:
                 raise ValueError("reduction limits: at most64 trials and600 seconds")
+            _require_external_output(args.bundle, args.out)
             out = Path(args.out)
             if out.exists() or any(x.is_symlink() for x in (out, *out.parents)):
                 raise ValueError("reduction output must be new")
